@@ -103,3 +103,11 @@ Make sure you set the mail env variables & **the command** `php artisan queue:wo
   POST /api/logout
 ```
 
+## Roadmap
+
+- Comment the code
+
+- Add unit testing 
+
+
+
