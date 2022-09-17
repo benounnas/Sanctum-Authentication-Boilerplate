@@ -17,7 +17,11 @@ this is just a placeholder for future open source projects, restructered with th
 
 ## Installation
 
-To run this project, you will need to run the following commands:
+clone the repo 
+
+`git clone git@github.com:benounnas/Sanctum-Authentication-Boilerplate.git`
+
+`cd` to the project and run the following commands:
 
 copy the env example file : `copy .env.example .env` (windows), `cp .env.example .env` (Linux/Mac)
 
