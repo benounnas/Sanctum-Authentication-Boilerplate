@@ -21,6 +21,8 @@ clone the repo
 
 `git clone git@github.com:benounnas/Sanctum-Authentication-Boilerplate.git`
 
+Laravel uses `composer` as php package manager, make sure you install it to run `composer install`
+
 `cd` to the project and run the following commands:
 
 copy the env example file : `copy .env.example .env` (windows), `cp .env.example .env` (Linux/Mac)
