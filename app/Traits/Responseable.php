@@ -30,7 +30,6 @@ trait Responseable
     {
         $response = [
             'message' => $message,
-            'errors' => $this->errors,
             "data"=> $resource
         ];
 
@@ -54,19 +53,17 @@ trait Responseable
     }
 
 
-    protected function authResponse(int $status = 200, bool|string $error = false, mixed $token = null, $extraData = null): JsonResponse
+    protected function authResponse(int $status = 200, bool|string $error = false, mixed $token = null): JsonResponse
     {
         switch ($status) {
             case 200:
                 $user = $this->currentUser();
                 return $this->jsonResponse(compact('token','user'));
-                break;
             case 403:
             case 404:
             case 500:
             case 400:
                 return $this->jsonResponse(compact('error'), $status);
-                break;
             case 401:
                 return $this->jsonResponse(compact('token'));
         }
