@@ -17,7 +17,13 @@ this is just a placeholder for future open source projects, restructered with th
 
 ## Installation
 
-To run this project, you will need to run the following commands:
+clone the repo 
+
+`git clone git@github.com:benounnas/Sanctum-Authentication-Boilerplate.git`
+
+Laravel uses `composer` as php package manager, make sure you install it to run `composer install`
+
+`cd` to the project and run the following commands:
 
 copy the env example file : `copy .env.example .env` (windows), `cp .env.example .env` (Linux/Mac)
 
@@ -96,4 +102,12 @@ Make sure you set the mail env variables & **the command** `php artisan queue:wo
 ```http
   POST /api/logout
 ```
+
+## Roadmap
+
+- Comment the code
+
+- Add unit testing 
+
+
 

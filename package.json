@@ -2,17 +2,39 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "run-p type-check build-only",
+        "preview": "vite preview --port 4173",
+        "build-only": "vite build",
+        "type-check": "vue-tsc --noEmit",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
     },
     "devDependencies": {
+        "@rushstack/eslint-patch": "^1.1.4",
         "@tailwindcss/forms": "^0.5.2",
+        "@types/node": "^16.11.56",
+        "@vitejs/plugin-vue": "^3.0.3",
+        "@vue/eslint-config-prettier": "^7.0.0",
+        "@vue/eslint-config-typescript": "^11.0.0",
+        "@vue/tsconfig": "^0.1.3",
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.2",
         "axios": "^0.27",
+        "eslint": "^8.22.0",
+        "eslint-plugin-vue": "^9.3.0",
         "laravel-vite-plugin": "^0.6.0",
         "lodash": "^4.17.19",
+        "npm-run-all": "^4.1.5",
         "postcss": "^8.4.6",
+        "prettier": "^2.7.1",
         "tailwindcss": "^3.1.0",
-        "vite": "^3.0.0"
+        "typescript": "~4.7.4",
+        "vite": "^3.0.0",
+        "vue-tsc": "^0.40.7"
+    },
+    "dependencies": {
+        "@vitejs/plugin-vue": "^3.1.0",
+        "pinia": "^2.0.22",
+        "vue": "^3.2.39",
+        "vue-router": "^4.1.5"
     }
 }
